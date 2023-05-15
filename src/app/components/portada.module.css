@@ -1,0 +1,7 @@
+.image {
+    background-position: center center;
+    transform: translateZ(-0.5px) scale(2);
+    background-size: cover;
+    z-index: -1;
+    height: 50vh;
+}
