@@ -1,18 +1,15 @@
 'use client';
-import React from 'react';
 import Image from 'next/image';
 import myCss from './portada.module.css';
-import { Parallax } from 'react-parallax';
 
 const Portada = () => {
 	return (
-		<Parallax bgImage='/portada.webp' strength={400} style={{ backgroundAttachment: 'fixed', backgroundPosition: 'center' }}>
-			<div style={{ height: '400px' }}>
-				<h1 className='absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-white text-4xl font-bold text-center'>
-					Mi texto de título
-				</h1>
-			</div>
-		</Parallax>
+		<div className='w-full h-auto relative'>
+			<img src='/portada3.jpg' className={myCss.image} />
+			<h1 className='absolute w-full top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-slate-100 text-4xl font-sans text-center font-bold uppercase'>
+				<span className='md:bg-purple-500 py-1 px-2 text-center'>Iniciativa Newcom</span>
+			</h1>
+		</div>
 	);
 };
 
