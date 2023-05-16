@@ -1,4 +1,6 @@
 // import './normalize.css';
+import Navigation from './components/Navigation';
+import Portada from './components/Portada';
 import './globals.css';
 import { Inter } from 'next/font/google';
 
@@ -12,7 +14,13 @@ export const metadata = {
 export default function RootLayout({ children }) {
 	return (
 		<html lang='en'>
-			<body className={inter.className}>{children}</body>
+			<body className={inter.className}>
+				<Navigation />
+				<div className='portada w-full h-auto relative'>
+					<Portada />
+				</div>
+				<div className='container mx-auto px-4'>{children}</div>
+			</body>
 		</html>
 	);
 }
